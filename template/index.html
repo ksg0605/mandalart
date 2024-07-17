@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Mandalart" />
+    <meta name="viewport" content="width = device-width, initial-scale=0.3" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--html2canvas-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+    <script type="text/javascript" src="../dist/html2canvas.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/stylesheet.css" type="text/css" />
+    <!--font Hanna-->
+    <title>Online Mandalart</title>
+  </head>
+
+  <body id="mycanvas">
+    <h1 style="font-size: 100px">Mandalart</h1>
+
+    <p class="start" id="start">START</p>
+    <!--first row-->
+    <div class="container-fluid" style="padding: 1px">
+      <div class="all_tables" id="all_tables">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <table id="cell1" align="center" style="float: right">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #0072be">
+                  <textarea disabled style="background-color: #0072be" id="p1">
+                  </textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="cell2" align="center">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #00b6e1">
+                  <textarea
+                    disabled
+                    style="background-color: #00b6e1"
+                    id="p2"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="cell3" align="center" style="float: left">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #00b552">
+                  <textarea
+                    disabled
+                    style="background-color: #00b552"
+                    id="p3"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!--second row-->
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <table id="cell4" align="center" style="float: right">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #a8d800">
+                  <textarea
+                    disabled
+                    style="background-color: #a8d800"
+                    id="p4"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="main" align="center">
+              <tr>
+                <td class="majorcell" style="background-color: #0072be">
+                  <textarea
+                    style="background-color: #0072be"
+                    id="first"
+                    type="textarea"
+                    name="sub1"
+                  ></textarea>
+                </td>
+                <td class="majorcell" style="background-color: #00b6e1">
+                  <textarea
+                    style="background-color: #00b6e1"
+                    id="second"
+                    type="text"
+                    name="sub2"
+                  ></textarea>
+                </td>
+                <td class="majorcell" style="background-color: #00b552">
+                  <textarea
+                    style="background-color: #00b552"
+                    id="third"
+                    type="text"
+                    name="sub3"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="majorcell" style="background-color: #a8d800">
+                  <textarea
+                    style="background-color: #a8d800"
+                    id="fourth"
+                    type="text"
+                    name="sub4"
+                  ></textarea>
+                </td>
+                <td class="majorcell">
+                  <textarea
+                    placeholder="Your Goal"
+                    type="text"
+                    name="main"
+                    id="goal"
+                  ></textarea>
+                </td>
+                <td class="majorcell" style="background-color: #ff8e00">
+                  <textarea
+                    style="background-color: #ff8e00"
+                    id="fifth"
+                    type="text"
+                    name="sub5"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td class="majorcell" style="background-color: #ff0013">
+                  <textarea
+                    style="background-color: #ff0013"
+                    id="sixth"
+                    type="text"
+                    name="sub6"
+                  ></textarea>
+                </td>
+                <td class="majorcell" style="background-color: #dc0067">
+                  <textarea
+                    style="background-color: #dc0067"
+                    id="seventh"
+                    type="text"
+                    name="sub7"
+                  ></textarea>
+                </td>
+                <td class="majorcell" style="background-color: #a35ab4">
+                  <textarea
+                    style="background-color: #a35ab4"
+                    id="eighth"
+                    type="text"
+                    name="sub8"
+                  ></textarea>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="cell5" align="center" style="float: left">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #ff8e00">
+                  <textarea
+                    disabled
+                    style="background-color: #ff8e00"
+                    id="p5"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!--third row-->
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <table id="cell6" align="center" style="float: right">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #ff0013">
+                  <textarea
+                    disabled
+                    style="background-color: #ff0013"
+                    id="p6"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="cell7" align="center">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #dc0067">
+                  <textarea
+                    disabled
+                    style="background-color: #dc0067"
+                    id="p7"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <table id="cell8" align="center" style="float: left">
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td class="majorcell" style="background-color: #a35ab4">
+                  <textarea
+                    disabled
+                    style="background-color: #a35ab4"
+                    id="p8"
+                  ></textarea>
+                </td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+              <tr>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+                <td><textarea type="text"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <p
+            style="
+              color: #fff;
+              font-size: 12px;
+              text-align: right;
+              margin-right: 5%;
+            "
+          >
+            by ACH [www.mandart.xyz]
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="btn-group"
+      role="group"
+      style="display: table; margin: 0 auto; margin-bottom: 20px"
+    >
+      <button
+        type="button"
+        class="btn btn-info"
+        id="reset"
+        style="width: 150px"
+      >
+        RESET
+      </button>
+      <button
+        type="button"
+        class="btn btn-default"
+        id="minimize"
+        style="width: 150px"
+      >
+        CLOSE ALL
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        id="maximize"
+        style="width: 150px"
+      >
+        OPEN ALL
+      </button>
+    </div>
+  </body>
+</html>
